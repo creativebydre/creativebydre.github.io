@@ -1,0 +1,39 @@
+# Configuration Courses Widget -All courses widget min have 3 list
+
+# BEST COURSES
+
+best_courses_title: Best Seller Courses
+
+best_courses_list: # do not enter text in this area, it is blank by default for lists
+ - title: 'Qt 6 C++ GUI Development for Beginners : The Fundamentals'
+   subtitle: Qt 6 C++ GUI Development for Beginners subtitle in here
+   image: /assets/img/learnqtcourses1.webp
+   link: /courses/qt6-c++-gui-development-for-beginners.html
+ - title: 'The C++20 Masterclass : From Fundamentals to Advanced'
+   subtitle: The C++20 Masterclass subtitle in here
+   image: /assets/img/learnqtcourses2.webp
+   link:  /courses/the-c++20-masterclass -from-fundamentals-to-advanced.html
+ - title: 'Qt For Python (PySide6) GUI For Beginners : The Fundamentals'
+   subtitle: Qt For Python (PySide6) subtitle in here
+   image: /assets/img/learnqtcourses3.webp
+   link: /courses/qt-for-python-fundamentals-pyslide6.html
+
+
+# CONTACT
+# for contact information on courses page
+
+message_info: Need information and help about this courses ?? 
+message_button: Send Message
+message_title: Contact LearnQt
+
+courses_button: Explore All Courses
+
+courses_button_singgle: Read More
+
+buy_button_page: Buy This Courses
+
+buy_button_on_list: Take Courses
+
+
+
+

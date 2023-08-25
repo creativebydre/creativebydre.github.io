@@ -1,0 +1,126 @@
+title: QT TRaining Services
+description: All about QT in one place 
+url: https://mesinkasir.github.io # you website url https://www.learnqt.guide/
+baseurl: 'learnqtguide'
+favicon: /assets/img/learnqt-nav.webp
+email: info@learntqt.guide
+logo: /assets/img/learnqt-nav.webp
+
+# for activate comment integration with github issue 
+# need to install on repo visit https://github.com/apps/utterances - and click install
+#githubrepo: rutura/learnqt
+
+githubrepo: mesinkasir/mesinkasir.github.io
+
+#navbar homepage slider version
+navhome: 
+ - name: Home
+   link: '#'
+ - name: Courses
+   link: '#courses'
+ - name: Book
+   link: '#book'
+ - name: About
+   link: '#about'
+ - name: Contact
+   link: '#contact'
+ - name: Blog
+   link: '#blog'
+
+# navbar on page
+navigation: 
+ - name: Home
+   link: /
+ - name: Courses
+   link: /courses
+ - name: Books
+   link: /books
+ - name: About
+   link: /about
+ - name: Contact
+   link: /contact
+ - name: Blog
+   link: /blog
+
+#footer area
+footer: 
+ logo: /assets/img/learnqt-green.webp
+ title: Learn QT
+ content:  'Clear, Up Front Courses on Qt , We have made it our business to provide the best online learning resources for Qt Development.We put in the required effort to make sure the code resources coming with the courses are up to date and use the latest tools to reduce the husstle for students as much as possible. We already have the basic courses on Qt C++ and QML out and there are more in the pipeline.'
+ icon: /assets/img/learnqt-nav.webp
+ button: Become a Pro Member
+ link: /premium/
+
+#social media
+youtube: https://www.youtube.com/channel/UCUYUFiuJ5XZ3JYtbq5dXRKQ
+facebook: https://web.facebook.com/learnqtguide/
+twitter: https://twitter.com/learnqtguide
+linked: https://www.linkedin.com/in/daniel-gakwaya-2a570092
+
+#author
+author: 
+ title: Your Instructor Author and Mentor
+ image: /assets/img/daniel.webp
+ name: Daniel Haghwa
+ label: Udemy Instructor Patner
+ description: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+
+# copyrights
+footercopyrights: copyrights 2023 learnqtguides.com all rights reserved
+
+# blog post pagination
+paginate: 3
+# default blog post
+paginate_path: "/blog/page:num/"
+
+# settup
+
+collections:
+  courses:
+    output: true
+  books:
+    output: true
+  pages:
+    output: true
+defaults:
+  - scope:
+      path: ""
+      type: "courses"
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+      type: "books"
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "default"
+#      permalink: /:year/:month/:title:output_ext
+      permalink: /:title
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-paginate
+
+markdown: kramdown
+highlighter: rouge
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter_opts:
+    default_lang: html
+    css_class   : 'syntax'

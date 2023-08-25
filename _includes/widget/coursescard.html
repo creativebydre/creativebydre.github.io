@@ -1,0 +1,11 @@
+{% if page.coursescard == true %}
+<div class="zoom mb-3 shadow-sm border-success border-top">
+<h3 class="p-3 lead"><strong><a href="{{site.data.cardcourses.link}}">{{site.data.cardcourses.title}}</a></strong></h3>
+<img class="img-fluid p-1 lazyload" loading="lazy" width="100%" height="100%" 
+data-src="{{site.data.cardcourses.image}}"/>
+<p class="text-dark p-1 mt-3">{{site.data.cardcourses.description}}</p>
+<p><a href="{{site.data.cardcourses.link}}" 
+class="btn col-12 mt-3 mb-3 bg-green btn-outline-success" 
+style="border-radius:0;">{{site.data.cardcourses.button}}</a></p>
+</div>
+{% endif %}
