@@ -1,7 +1,7 @@
 title: QT TRaining Services
 description: All about QT in one place 
-url: https://mesinkasir.github.io # you website url https://www.learnqt.guide/
-baseurl: 'learnqtguide'
+url: # you website url https://www.learnqt.guide/
+baseurl: ''
 favicon: /assets/img/learnqt-nav.webp
 email: info@learntqt.guide
 logo: /assets/img/learnqt-nav.webp
