@@ -24,14 +24,6 @@ best_courses_list: # do not enter text in this area, it is blank by default for 
    level: beginer
    link: /courses/
 
-
-# CONTACT
-# for contact information on courses page
-
-message_info: Need information and help about this courses ?? 
-message_button: Send Message
-message_title: Contact LearnQt
-
 courses_button: Explore All Courses
 
 courses_button_singgle: Read More

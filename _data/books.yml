@@ -15,14 +15,6 @@ best_books_list: # do not enter text in this area, it is blank by default for li
    link: https://mailchi.mp/a7c4442d916d/qt-creator-shortcuts
 
 
-# CONTACT
-# for contact information on books page
-
-message_info: Need information and help about this book ?? 
-message_button: Send Message
-message_icon: /assets/img/chat.svg
-message_title: Contact LearnQt
-
 
 books_button: Explore All Booklet
 
