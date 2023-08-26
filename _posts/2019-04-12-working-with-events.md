@@ -8,7 +8,6 @@ categories:
 tags:
     - Qt
     - Events
-sidebar: right
 comments: true
 sidebar: true
 

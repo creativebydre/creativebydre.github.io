@@ -13,7 +13,7 @@ tag:
  - flask
  - django admin
 comments: true
-sidebar: false
+sidebar: true
 coursescard: false
 bookcard: false
 ---
