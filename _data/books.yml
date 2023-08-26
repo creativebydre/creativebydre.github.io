@@ -8,11 +8,11 @@ best_books_list: # do not enter text in this area, it is blank by default for li
  - title: Qt6 QML For Beginners
    subtitle: Qt6 QML For Beginners subtitle in here
    cover: /assets/img/learnqtbook.webp
-   link: /books/qt6-qml-for-beginners.html
+   link: https://mailchi.mp/a7c4442d916d/qt-creator-shortcuts
  - title: The C++20 Masterclass
    subtitle: The C++20 Masterclass subtitle in here
    cover: /assets/img/learnqtbook2.webp
-   link: /books/the-c++-masterclass.html
+   link: https://mailchi.mp/a7c4442d916d/qt-creator-shortcuts
 
 
 # CONTACT

@@ -12,7 +12,7 @@ button_book_link: '#book'
 courses: 
  title: Featured Courses
  description: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
- display: 6
+ display: 3
  button: Explore All Courses
  button_post: Learn More
 
@@ -27,21 +27,21 @@ book1:
  description: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
  content: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
  cover: /assets/img/learnqtbook.webp
- link: /books/qt6-qml-for-beginners.html
+ link: https://mailchi.mp/a7c4442d916d/qt-creator-shortcuts
 
 book2: 
  title: The C++20 Masterclass
  description: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
  content: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
  cover: /assets/img/learnqtbook2.webp
- link: /books/the-c++-masterclass.html
+ link: https://mailchi.mp/a7c4442d916d/qt-creator-shortcuts
 
 book3: 
  title: Qt For Python (PySide6)
  description: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
  content: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
  cover: /assets/img/learnqtbook3.webp
- link: /books/qt-for-phyton.html
+ link: /https://mailchi.mp/a7c4442d916d/qt-creator-shortcuts
 
 why: 
  title: Why Chose Us

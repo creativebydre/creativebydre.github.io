@@ -2,9 +2,9 @@ title: QT TRaining Services
 description: All about QT in one place 
 url: # you website url https://www.learnqt.guide/
 baseurl: ''
-favicon: /assets/img/learnqt-nav.webp
+favicon: /assets/blog/image/LearnQt.png
 email: info@learntqt.guide
-logo: /assets/img/learnqt-nav.webp
+logo: /assets/blog/image/LearnQt.png
 
 # for activate comment integration with github issue 
 # need to install on repo visit https://github.com/apps/utterances - and click install
@@ -25,7 +25,7 @@ navhome:
  - name: Contact
    link: '#contact'
  - name: Blog
-   link: '#blog'
+   link: '/blog/'
 
 # navbar on page
 navigation: 
@@ -42,9 +42,24 @@ navigation:
  - name: Blog
    link: /blog
 
+
+# Course Links
+coupon: 'STARTAUG2023'
+couponvalidity: 'August 15,2023'
+price: '$9.99'
+pyside6widgetsbeginners : 'https://www.udemy.com/course/qt-for-python-pyside6-gui-for-beginners/?couponCode='
+qt6guibeginners : 'https://www.udemy.com/course/qt6-c-gui-widgets-tutorial-for-beginners/?couponCode='
+cpp20masterclass:  'https://www.udemy.com/course/the-modern-cpp-20-masterclass/?couponCode='
+qtguibeginners: 'https://www.udemy.com/course/qt-c-gui-tutorial-for-complete-beginners/?couponCode='
+qtguiintermediate: 'https://www.udemy.com/course/qt-c-gui-development-intermediate/?couponCode='
+qmlbeginners: 'https://www.udemy.com/course/qt_quick_qml_tutorial_for_beginners/?couponCode='
+qmlintermediate: 'https://www.udemy.com/course/interfacing-qt-quick-qml-to-cpp-intermediate/?couponCode='
+qmladvanced: 'https://www.udemy.com/course/interfacing-qt-quick-qml-to-cpp-advanced/?couponCode='
+multithreading: 'https://www.udemy.com/course/multi-threading-and-ipc-with-qt-c-plus-plus/?couponCode='
+
 #footer area
 footer: 
- logo: /assets/img/learnqt-green.webp
+ logo: /assets/blog/image/LearnQt.png
  title: Learn QT
  content:  'Clear, Up Front Courses on Qt , We have made it our business to provide the best online learning resources for Qt Development.We put in the required effort to make sure the code resources coming with the courses are up to date and use the latest tools to reduce the husstle for students as much as possible. We already have the basic courses on Qt C++ and QML out and there are more in the pipeline.'
  icon: /assets/img/learnqt-nav.webp
@@ -72,6 +87,7 @@ footercopyrights: copyrights 2023 learnqtguides.com all rights reserved
 paginate: 3
 # default blog post
 paginate_path: "/blog/page:num/"
+
 
 # settup
 

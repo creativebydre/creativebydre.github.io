@@ -8,7 +8,7 @@
 </div>
 
 <div class="col-md-10 mx-auto">
-{% for bk in site.books %}
+{% for bk in site.data.bookslist %}
 <div class="col-md-12 p-3 mb-3">
 <div class="row shadow-sm zoom">
 <div class="col-md-6 p-3 ">
@@ -17,7 +17,7 @@
 <div class="col-md-6 p-3">
 <h3 class="card-title"><strong><a href="{{bk.url}}">{{bk.title}}</a></strong></h3>
 <p class="mt-3">
-{{bk.description}}
+{{bk.subtitle}}
 </p>
 <h3 class="card-title mt-3"><strong>
 {{bk.why}}
@@ -27,8 +27,8 @@
 <li>{{bkl}}</li>
 {% endfor %}
 </ul>
-<p><a href="{{bk.url}}" class="btn col-12 mt-3 mb-3 bg-green btn-outline-success btn-lg" 
-style="border-radius:0;">{{site.data.books.book_button_list}}</a></p>
+<p><a href="{{bk.link}}" class="btn col-12 mt-3 mb-3 bg-green btn-outline-success btn-lg" 
+style="border-radius:0;">Get The Book Now</a></p>
 </div>
 
 
