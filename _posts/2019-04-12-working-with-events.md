@@ -106,13 +106,13 @@ void Widget::closeEvent(QCloseEvent *event)
 {% endhighlight %}
 the event is going to be accepted by default. That’s a key piece of information to keep in mind. Before we try that, I want to challenge you to think about what is going to happen if we ignore the event in our event handler. You ignore the event by calling ignore() on your event.
 
-```cpp
+~~~cpp
 void Widget::closeEvent(QCloseEvent *event)
 {
      event->ignore();
      qDebug() << "QCloseEvent : Widget closed";
 }
-```
+~~~
 
 Try this and run the application. The widget is going to show up and if you click on the X icon to close the widget, NOTHING is going to happen! You’re just going to see the debug output from the event handler but Qt is just going to ignore the event in this case. If you happen to need to disable the X(Close) icon on your widgets, this is one way you can achieve this.
 
@@ -149,7 +149,7 @@ Another pillar of event propagation is knowing when and how to use the accept() 
 ## A Concrete Example
 We have seen quite a lot about events so far, so it’s a good time to fire off our Qt Creator IDE and play with these events a little more. Open the IDE up and create a new Widgets project. Add a new class and call it MyLineEdit . The class is going to inherit QLineEdit, because we want to capture keyPressEvents as we type text in the LineEdit. Modify the header of your class to look like below
 
-~~~
+~~~cpp
 class MyLineEdit : public QLineEdit
 {
     Q_OBJECT
@@ -173,7 +173,7 @@ void MyLineEdit::keyPressEvent(QKeyEvent *event)
 ~~~
 You can go on and create an instance of this class in your widget class to see it, but we’re going to resist the temptation now. Instead, create a new class and name it ChildLineEdit, modify its header to look like below
 
-~~~
+~~~cpp
 #include "mylineedit.h"
 class ChildLineEdit : public MyLineEdit
 {
@@ -199,7 +199,7 @@ void ChildLineEdit::keyPressEvent(QKeyEvent *event)
 ~~~
 This class is inheriting the MyLineEdit class we created earlier, so we need to include the “mylineedit.h” header file as seen in our header file above. Now you can jump into your widget class constructor and create an instance of ChildLineEdit as shown below
 
-~~~
+~~~cpp
 Widget::Widget(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::Widget)
@@ -219,12 +219,12 @@ We are creating an instance of our ChildLineEdit and assigning the current widge
 
 Type something in the LineEdit and you’re going to see that both the event handlers in ChildLineEdit and MyLineEdit are called. Can you thing of a reason why ? This is event propagation in action. ChildWidget is handling keyPressEvent doing something in that event handler : we are just printing a debug statement in this case but you could have just as easily done anything you want in there. After our custom thing, we are calling the parent implementation of keyPressEvent.
 
-~~~
+~~~cpp
 MyLineEdit::keyPressEvent(event);
 ~~~
 by passing in our event as the parameter. This causes the event handler from MyLineEdit to be called and we see its output in the screenshot shown above. To play around a little bit, modify ChildLineEdit::keyPressEvent() as shown below
 
-~~~
+~~~cpp
 void ChildLineEdit::keyPressEvent(QKeyEvent *event)
 {
     qDebug() << " ChildLineEdit,keyPressEvent , key : " << event->text();
@@ -237,7 +237,7 @@ On line number 4, we print out the accepted flag of the event to see if it’s a
 
 This means that the event parameter gets to you in the event handler as if somebody had already called the accept() method on it. So if you just want to do your thing in there and flag the event as accepted, you can omit the call to accept(). But it’s good practice to just put it in there for code readability reasons. In the parent( MyLineEdit) implementation , we can investigate the accepted flag the event gets there with but modifying the event handler as shown below
 
-~~~
+~~~cpp
 void MyLineEdit::keyPressEvent(QKeyEvent *event)
 {
     qDebug() << "MyLineEdit : keyPressEvent , key : " << event->text();
@@ -251,7 +251,7 @@ void MyLineEdit::keyPressEvent(QKeyEvent *event)
 ~~~
 Run the application, the output should look something like
 
-~~~
+~~~cpp
 ChildLineEdit,keyPressEvent , key :  "d"
 Event accepted :  true
 MyLineEdit : keyPressEvent , key :  "d"
@@ -260,7 +260,7 @@ Event has been already handled
 
 As can be seen, the event is flagged as already handled. This causes parent handlers not to take any action on the given event. You can go back in ChildLineEdit and explicitly ignore the event as shown below
 
-~~~
+~~~cpp
 void ChildLineEdit::keyPressEvent(QKeyEvent *event)
 {
     qDebug() << " ChildLineEdit,keyPressEvent , key : " << event->text();
@@ -271,7 +271,7 @@ void ChildLineEdit::keyPressEvent(QKeyEvent *event)
 ~~~
 Run the app, and the output will look like
 
-~~~
+~~~cpp
 ChildLineEdit,keyPressEvent , key :  "d"
 Event accepted :  true
 MyLineEdit : keyPressEvent , key :  "d"
@@ -280,7 +280,7 @@ Event hasn't been handled yet
 
 meaning that the event is flagged as ignored in the ChildLineEdit, which is reflected in the MyLineEdit. If you want to stop the event from propagating up the chain all together, you can omit the call to the parent implementation. If you comment out the call to MyLineEdit::keyPressEvent(event), you’ll see that only ChildLineEdit::keyPressEvent is going to be called.
 
-~~~
+~~~cpp
 void ChildLineEdit::keyPressEvent(QKeyEvent *event)
 {
     qDebug() << " ChildLineEdit,keyPressEvent , key : " << event->text();
@@ -295,7 +295,7 @@ But notice the problem here. When you type something in the line edit, you don�
 ## Events and Event Classes
 So far, we have touched on only a bunch of events for you to grab a few concepts first, but you should know that there is a whole world of them out there for you to play with. Events are all subclasses of the QEvent class and each child class adds new fields and methods to help fulfill the purpose it was made for. For example the QResizeEvent will contain the old size and the current size for the widget, the QMouseEvent will contain the location where the mouse was clicked on the screen and so forth. Below is a widget subclass with a few more events for you to play with. The header is as shown below
 
-~~~
+~~~cpp
 class Widget : public QWidget
 {
     Q_OBJECT
@@ -322,7 +322,7 @@ private:
 
 and here is the implementation cpp file for it
 
-~~~
+~~~cpp
 Widget::~Widget()
 {
     delete ui;
@@ -451,7 +451,7 @@ We have seen number 1 so far so we won’t talk any more about it.
 ## Reimplementing QObject::event()
 You use this method by subclassing your class of interest but instead of implementing specific event handlers like keyPressEvent() …, you implement the QObject::event() override. This allows all events to pass through your override and you can decide which ones to handle and which ones to channel up the event propagation chain. To play with this, let’s create a QPushButton subclass and implement our own event() override as shown in the header below
 
-~~~
+~~~cpp
 class MyButton : public QPushButton
 {
     Q_OBJECT
@@ -465,7 +465,7 @@ public slots:
 ~~~
 The implementation cpp file looks like
 
-~~~
+~~~cpp
 MyButton::MyButton(QWidget *parent) : QPushButton(parent)
 {
 }
@@ -489,7 +489,7 @@ This method is good if for some reason you want to channel all your events throu
 
 To try this out, create an instance of the button in your widget class and connect a slot to it
 
-~~~
+~~~cpp
 MyButton * myButton = new MyButton(this);
 myButton->setText("MyButton");
 connect(myButton,SIGNAL(clicked()),this,SLOT(myButtonClicked()));
@@ -508,7 +508,7 @@ Event filters are subclasses of the QObject class that you can attach to a given
 QObject::installEventFilter()  on the object.
 An event filter gets to process events before the target object does, allowing it to inspect and discard the events as required. An existing event filter can be removed using the QObject::removeEventFilter() function. You intercept events in the eventFilter() method that you have to override. As an example, let’s suppose that we want to filter out numbers when somebody is typing in a line edit. We could create a DigitFilter class as shown below
 
-~~~
+~~~cpp
 class DigitFilter : public QObject
 {
     Q_OBJECT
@@ -526,7 +526,7 @@ QString message;
 ~~~
 The implementation could be something like
 
-~~~
+~~~cpp
 DigitFilter::DigitFilter(QObject *parent,QString msg) : QObject(parent)
 {
     message = msg;
@@ -561,7 +561,7 @@ This will cause for all events for the line edit to go through the eventFilter()
 
 Besides installing filters on regular QObjects, you can also install them on the single QApplication instance in your application. Obviously , event filters on QApplication are called before any event filter installed on any other object in the application. Let’s try this out. Assuming you have a bare bones widget application created in the IDE, create a new filter class and call it MFilter
 
-~~~
+~~~cpp
 class MFilter : public QObject
 {
     Q_OBJECT
@@ -577,7 +577,7 @@ private:
 ~~~
 It’s just a regular filter like we’ve seen before. Its implementation is as shown below
 
-~~~
+~~~cpp
 MFilter::MFilter(QString message,QObject *parent) : QObject(parent),
     m_message(message)
 {
@@ -596,7 +596,7 @@ bool MFilter::eventFilter(QObject *dest, QEvent *event)
 
 I hope it’s clear that we’re filtering for mouse clicks and double clicks. Now you can full scale in craziness, and install this filter on the QApplication instance in your main function
 
-~~~
+~~~cpp
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
@@ -612,7 +612,7 @@ int main(int argc, char *argv[])
 ~~~
 If you create buttons in your form and attach slots to respond when they are clicked like below
 
-~~~
+~~~cpp
 Widget::Widget(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::Widget)
@@ -641,7 +641,7 @@ void Widget::on_button2_clicked()
 ~~~
 and run the application, you’re going to see that when you click on the buttons, the slots are not going to respond, instead you’re going to see the filter respond in the debug output message below
 
-~~~
+~~~cpp
 Event hijacked  "FromMain"
 ~~~
 
@@ -649,7 +649,7 @@ Event hijacked  "FromMain"
 
 QApplication::notify() is the method that is called by Qt to send the event to the receiver. Using a subclass of QApplication in your Qt app and overriding the virtual method notify() is by far the most powerful method to intercept events and handle them. The way you use it is strikingly similar to what we’ve seen with QObject::event() and QObject::eventFilter. You subclass QApplication
 
-~~~
+~~~cpp
 class Application : public QApplication
 {
     Q_OBJECT
@@ -664,7 +664,7 @@ public slots:
 
 and override the notify() method as shown below
 
-~~~
+~~~cpp
 Application::Application(int &amp;argc, char **argv) : QApplication(argc,argv)
 {
 }
@@ -682,7 +682,7 @@ bool Application::notify(QObject *receiver, QEvent *event)
 ~~~
 Again, where we’re just filtering out mouse clicks and double clicks. You use this subclass of QApplication where you would use a regular QApplication class.
 
-~~~
+~~~cpp
 int main(int argc, char *argv[])
 {
     Application a(argc, argv);
@@ -705,7 +705,7 @@ The documentation for sendEvent is pretty clear, it just sends the event to the 
 
 Create a regular bare bones widget application. Add a new QPushButton subclass for which you’re going to override mousePressEvent, mouseMoveEvent and mouseReleaseEvent. The header is shown below
 
-~~~
+~~~cpp
 class Button : public QPushButton
 {
     Q_OBJECT
@@ -722,7 +722,7 @@ public slots:
 
 and the implementation below
 
-~~~
+~~~cpp
 Button::Button(QWidget *parent) : QPushButton(parent)
 {
 }
@@ -749,7 +749,7 @@ Our intent is to create two buttons in our user interface, button1 and button2. 
 
 For us to see these events, button2 should be an instance of our custom Button class. A portion of our widget class looks like below
 
-~~~
+~~~cpp
 Widget::Widget(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::Widget)
@@ -780,14 +780,14 @@ button1 is defined in the ui form but its connected slot can be seen above. Insi
 
 button2 is going to receive the event and its relevant event handlers are going to be triggered. If you run the app and click on button1, you’re going see that button2 is going to respond through its event handlers.
 
-~~~
+~~~cpp
 Mouse release at  QPoint(10,10)
 Event accepted
 ~~~
 
 You can change the event to QEvent::MouseButtonPress or QEvent::MouseMove to trigger the other event handlers. Using postEvent() to queue events is just as easy.
 
-~~~
+~~~cpp
 void Widget::on_button1_clicked()
 {
     QMouseEvent * mEvt = new QMouseEvent(QEvent::MouseButtonRelease, QPointF(10,10), Qt::LeftButton, Qt::LeftButton,Qt::NoModifier);
