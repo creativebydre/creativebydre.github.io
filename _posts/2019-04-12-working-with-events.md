@@ -139,7 +139,7 @@ The quoted line in the doc also says that
 
 It makes it clear that the parent implementation of keyPressEvent is doing some stuff. Depending on what you are trying to achieve, you may or may not be interested in what the parent implementation has to offer. If you want to completely bypass what the parent implementation is doing, just do your thing in your overridden event handler and don’t call the parent implementation. By the way, you call the parent implementation by doing something like this
 
-~~~
+~~~cpp
 QWidget::keyPressEvent(event);
 ~~~
 By passing in your event parameter, if your parent class happens to be QWidget for example. This is what is meant by event propagation. Events can be , and in most cases are , propagated from parent to child until an object is found, that is interested in the event. Child classes propagate to parents by calling the same event method in their parent classes.
@@ -186,7 +186,7 @@ public:
 ~~~
 and its implementation CPP file to look like below
 
-~~~
+~~~cpp
 ChildLineEdit::ChildLineEdit(QWidget *parent) : MyLineEdit(parent)
 {
 }

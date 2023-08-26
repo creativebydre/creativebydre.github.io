@@ -1,5 +1,5 @@
 {% if page.coursescard == true %}
-{% for cv in site.data.cardcourses.cardlist | limit:{{site.data.cardbook.display_on_blog_list}} %}
+{% for cv in site.data.cardcourses.cardlist | limit:{{site.data.cardbook.display_on_blog_page}} %}
 <div class="zoom mb-3 shadow-sm border-success border-top">
 <h3 class="p-3 lead"><strong><a href="{{cv.link}}">{{cv.title}}</a></strong></h3>
 <img class="img-fluid p-1 lazyload" loading="lazy" width="100%" height="100%" 

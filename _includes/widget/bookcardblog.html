@@ -1,5 +1,5 @@
 {% if page.bookcard == true %}
-{% for ca in site.data.cardbook.cardlist | limit:{{site.data.cardbook.display_on_blog_list}} %}
+{% for ca in site.data.cardbook.cardlist | limit:{{site.data.cardbook.display_on_blog_page}} %}
 <div class="zoom mb-3 mt-3 shadow-sm border-success border-top">
 <h3 class="p-3 lead">
 <strong><a href="{{ca.link}}">{{ca.title}}</a></strong>
