@@ -22,8 +22,8 @@ nav:
  - title: Github
    link: https://gtihub.com/mesinkasir
 locale: en_EN
-#url: 'https://creativitas.github.io'
-baseurl: ''
+url: 'https://creativebydre.github.io/'
+#baseurl: ''
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
