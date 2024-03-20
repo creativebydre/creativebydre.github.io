@@ -1,0 +1,52 @@
+title: Website Developer
+description: JAMSTACK web developer - Static Site Generator - Jekyll - Eleventy - Astro Js
+slogan: Creative by dre
+favicon: https://creativitas.github.io/assets/img/creativitaswebdev.webp
+image: /assets/img/image.jpg
+intro: www.fiverr.com/creativitas
+link: https://www.fiverr.com/creativitas
+menu1: 
+ title: 📢 Blog
+ link: blog
+menu2: 
+ title: 💌 Message 
+ link: mailto:creativebydre@gmail.com
+menu3: 
+ title: Coffee ☕
+ link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=JVZVXBC4N9DAN
+nav: 
+ - title: Home
+   link: /
+ - title: Blog
+   link: /blog
+ - title: Github
+   link: https://gtihub.com/mesinkasir
+locale: en_EN
+#url: 'https://creativitas.github.io'
+baseurl: ''
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+defaults:
+ - scope:
+     path: ""
+     type: pages
+   values:
+     layout: pages
+ - scope:
+     path: ""
+     type: posts
+   values:
+     layout: post
+ - scope:
+     path: ""
+   values:
+     layout: default
+collections:
+  services:
+    output: true
+  pages:
+    output: true
+  locations:
+    output: true 

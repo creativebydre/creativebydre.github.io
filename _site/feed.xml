@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-03-20T16:34:42+07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Website Developer</title><subtitle>JAMSTACK web developer - Static Site Generator - Jekyll - Eleventy - Astro Js</subtitle><entry><title type="html">How to install jekyll 💉 on Windows OS</title><link href="http://localhost:4000/2024/03/02/install-jekyll-on-windows.html" rel="alternate" type="text/html" title="How to install jekyll 💉 on Windows OS" /><published>2024-03-02T00:00:00+07:00</published><updated>2024-03-02T00:00:00+07:00</updated><id>http://localhost:4000/2024/03/02/install-jekyll-on-windows</id><content type="html" xml:base="http://localhost:4000/2024/03/02/install-jekyll-on-windows.html"><![CDATA[<h3 id="download-ruby">Download Ruby</h3>
+
+<p>For first we need to <a href="https://rubyinstaller.org/downloads/">download ruby →</a></p>
+
+<p>Run ruby installation on your device, next step open command prompt terminal - or press windows logo and type CMD</p>
+
+<p>Run this command <code class="language-plaintext highlighter-rouge">gem install jekyll bundler</code></p>
+
+<p>Now you can check your <a href="https://www.jekyllrb.com">jekyll</a> version by run this command <code class="language-plaintext highlighter-rouge">jekyll -v</code></p>
+
+<h3 id="download-starter-themes">Download Starter Themes</h3>
+
+<p>Next you can download our jekyll starter themes , <a href="https://www.hockeycomputindo.com/themes/jekyll/">Download Jekyll Starter Now →</a></p>
+
+<h3 id="run-starter-themes">Run Starter themes</h3>
+
+<p>Now you can run the starter project in to your devices, extract our starter jekyll project in to your project, 
+open terminal and access the starter project - Next step you can run <code class="language-plaintext highlighter-rouge">bundle install &amp;&amp; exec jekyll serve</code></p>
+
+<p>Open your web browser and access <code class="language-plaintext highlighter-rouge">localhost:4000</code></p>]]></content><author><name></name></author><summary type="html"><![CDATA[Simple step how to install Jekyll on Windows OS]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://res.cloudinary.com/dp1ndwq6a/image/upload/w_40/c_thumb/q_auto/f_avif/v1705657341/creativitas-netlify/webtech/jekylldeveloper_jrk0va.png" /><media:content medium="image" url="https://res.cloudinary.com/dp1ndwq6a/image/upload/w_40/c_thumb/q_auto/f_avif/v1705657341/creativitas-netlify/webtech/jekylldeveloper_jrk0va.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">How to install 👨🏻‍🚀 Astro Js on Windows OS</title><link href="http://localhost:4000/2024/03/02/install-astro-on-windows.html" rel="alternate" type="text/html" title="How to install 👨🏻‍🚀 Astro Js on Windows OS" /><published>2024-03-02T00:00:00+07:00</published><updated>2024-03-02T00:00:00+07:00</updated><id>http://localhost:4000/2024/03/02/install-astro-on-windows</id><content type="html" xml:base="http://localhost:4000/2024/03/02/install-astro-on-windows.html"><![CDATA[<h3 id="download-node-js">Download Node Js</h3>
+
+<p>For run <a href="https://astro.build">astro js</a> project , you need to <a href="https://nodejs.org/en/download">download node js →</a></p>
+
+<p>Download and run installation node js in to your devices.</p>
+
+<h3 id="astro-js-starter-project">Astro Js Starter Project</h3>
+
+<p>Now you can download astro js starter project, <a href="https://www.hockeycomputindo.com/themes/astro/">download astro js starter now →</a></p>
+
+<h3 id="run-astro-js-project">Run Astro Js Project</h3>
+
+<p>Next step you can extract astro js starter project in to your project folder - open terminal and run <code class="language-plaintext highlighter-rouge">npm run dev</code> and open <code class="language-plaintext highlighter-rouge">localhost:4321</code> or for astro v.1 , v.s you can open on <code class="language-plaintext highlighter-rouge">localhost:3000</code></p>]]></content><author><name></name></author><summary type="html"><![CDATA[Simple Step how to install Eleventy 11ty on Windows OS]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://res.cloudinary.com/dp1ndwq6a/image/upload/w_40/c_thumb/q_auto/f_avif/v1705657335/creativitas-netlify/webtech/astrodeveloper_w6lbna.png" /><media:content medium="image" url="https://res.cloudinary.com/dp1ndwq6a/image/upload/w_40/c_thumb/q_auto/f_avif/v1705657335/creativitas-netlify/webtech/astrodeveloper_w6lbna.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">How to install 🐭 Eleventy 11ty on Windows OS</title><link href="http://localhost:4000/2024/03/02/install-eleventy-on-windows.html" rel="alternate" type="text/html" title="How to install 🐭 Eleventy 11ty on Windows OS" /><published>2024-03-02T00:00:00+07:00</published><updated>2024-03-02T00:00:00+07:00</updated><id>http://localhost:4000/2024/03/02/install-eleventy-on-windows</id><content type="html" xml:base="http://localhost:4000/2024/03/02/install-eleventy-on-windows.html"><![CDATA[<h3 id="download-node-js">Download Node Js</h3>
+
+<p>For run eleventy 11ty project , you need to <a href="https://nodejs.org/en/download">download node js →</a></p>
+
+<p>Download and run installation node js in to your devices.</p>
+
+<h3 id="eleventy-starter-project">Eleventy Starter Project</h3>
+
+<p>Now you can download <a href="https://11ty.dev">eleventy 11ty</a> starter project, <a href="https://www.hockeycomputindo.com/themes/eleventy/">download eleventy 11ty starter now →</a></p>
+
+<h3 id="run-eleventy-project">Run Eleventy Project</h3>
+
+<p>Next step you can extract eleventy starter project in to your project folder - open terminal and run <code class="language-plaintext highlighter-rouge">npm run dev</code> and open <code class="language-plaintext highlighter-rouge">localhost:8080</code></p>]]></content><author><name></name></author><summary type="html"><![CDATA[Simple step how to install Eleventy 11ty on Windows OS]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://res.cloudinary.com/dp1ndwq6a/image/upload/w_40/c_thumb/q_auto/f_avif/v1705657338/creativitas-netlify/webtech/eleventydeveloper_g8ua9d.png" /><media:content medium="image" url="https://res.cloudinary.com/dp1ndwq6a/image/upload/w_40/c_thumb/q_auto/f_avif/v1705657338/creativitas-netlify/webtech/eleventydeveloper_g8ua9d.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

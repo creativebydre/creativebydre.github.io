@@ -1,0 +1,6 @@
+<a href="{{site.url}}" class="col-md-12 p-3">{{site.slogan}}</a>
+<nav class="nav p-3 justify-content-center row border-bottom border-top">
+{% for nav in site.nav %}
+<a href="{{nav.link}}" class="nav-link col-md-4 link-body-emphasis" ">{{nav.title}}</a>
+{% endfor %}
+</nav>
