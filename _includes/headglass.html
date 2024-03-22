@@ -5,29 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{{page.title}} {{site.title}}</title>
 <meta name="description" content="{{page.description}} - {{site.description}}"/>
-<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-<meta http-equiv="Pragma" content="no-cache" />
-<meta http-equiv="Expires" content="0" />
 <link href="{{site.url}}/assets/css/creativebydre.css"  rel="stylesheet" >
 <link href="{{site.url}}/assets/css/glass.css"  rel="stylesheet" >
 {% feed_meta %}
 {% seo %}
-<meta content='{{site.url}}{{page.image}}' name='twitter:image'/>
-<meta content='{{site.url}}{{page.image}}' name='facebook:image'/>
-<meta content='{{site.url}}{{page.image}}' property='og:image'/>
-<meta property="og:image:width" content="1280">
-<meta property="og:image:height" content="640">
-<meta property="twitter:image:width" content="120">
-<meta property="twitter:image:height" content="120">
-<meta property="og:image:alt" content="{{site.title}}/">
-<meta property="twitter:image:alt" content="{{site.title}}/">
-<meta content='{{site.url}}' property='facebook:author'/>
-<meta content='{{page.description}}' property='facebook:description'/>
-<meta content='{{page.description}}' property='twitter:description'/>
-<meta name="twitter:site"    content="{{site.social.twitter}}">
-<meta name="twitter:creator" content="@{{ site.url}}">
-<meta content='https://www.fiverr.com/creativitas' name='developer'/>
-<link rel="icon" type="image/x-icon" href="{{site.image}}" />
-<meta content="index, follow" name="robots" />
+{% include seo.html %}
 </head>
 <body>
