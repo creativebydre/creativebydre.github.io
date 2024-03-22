@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Son Andreas
+title: Creative by dre
 description: Just Creative by dre
 image: /assets/img/image.jpg
 ---
