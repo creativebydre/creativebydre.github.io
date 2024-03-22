@@ -1,6 +1,6 @@
 ---
 layout: blog
 title: blog
-description: 
+description: Blog Creative by dre
 image: 
 ---
